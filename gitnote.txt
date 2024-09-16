@@ -1,0 +1,23 @@
+如果某些文件已經被 Git 追蹤，即使你後來在 .gitignore 文件中指定了忽略規則，這些文件仍然會被追蹤
+像是__pycache__ ，因為很多個資料夾裡都有這個名字，所以可以先取消追蹤該資料夾
+輸入 git rm -r --cached "Lesson20-OOP Project" 
+再重新加入，用git add .
+
+刪掉本地Git儲存庫，用Remove-Item -Recurse -Force .git(必須到當初創建git的地方!!)
+標準流程:
+1.git init 創建.git 資料夾(是隱藏的你看不到)
+2.git add . 把所有目錄跟子目錄提交道暫存區
+3.git commit -m "Initial commit" 把暫存區的變更提交到暫存區，並附上一個訊息，以利於後續版本控制查閱歷史紀錄
+4.git push 上傳到雲端
+
+創建雲端倉庫，並輸入下面
+git remote add origin https://github.com/thesam1999/(雲端倉庫名稱).git  把本地倉庫跟雲端倉庫座連接
+>> git branch -M main -M是Move縮寫，會重命名分支。它會強制執行重命名操作，即使目標分支名稱已經存在。將當前的分支名稱更改為 main。如果當前分支名稱是 master 或其他名稱，這條命令會將其重命名為 main
+>> git push -u origin main 將本地更改推送到遠程倉庫。
+
+git remote add origin https://github.com/thesam1999/python-train.git
+git branch -M main
+git push -u origin main
+
+git remote rm origin 刪除雲端倉庫連結 ，orgin是雲端倉庫名稱
+可以使用git remote -v 顯示的第一個詞就是雲端倉庫名稱

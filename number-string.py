@@ -1,0 +1,24 @@
+#數字運算
+#x=3+6
+#print(x)
+#x=3/6#小數除法
+#print(x)
+#x=3//6
+#print(x)#整數除法
+#x=2**3#開次方
+#print(x)
+#x=2**0.5#開根號
+#print(x)
+#x=7%3#取餘數
+#print(x)
+#x=x+1
+#print(x)
+#字串運算
+s="Hello"
+print(s)
+s="Hell\"o"
+print(s)
+s="Hello"+"World"
+print(s)
+s="Hello" "World"
+print(s)

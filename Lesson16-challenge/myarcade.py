@@ -15,11 +15,11 @@ def myarcade(name):
             print(f"{name}, please enter 1, 2, or x.")
             return game_start()
 
-        if playgame == "1":
+        if playgame == "1":  # 這裡不能用int(playgame)，因為如果輸入X，會顯示錯誤，x不能轉換成integer
             guess_number = myguess_number.my_guess_number_game(name)
             guess_number()
             print(f"\n{name}, welcome back to the Arcade menu.\n")
-            return game_start()  # 重新執行myarcade()這個函數，因此裡面記得加name
+            return game_start()  # 重新執行game_start()這個函數，
         elif playgame == "2":
             rpsgame = rps(name)
             rpsgame()  # 跟上面 guess_number不同用法
